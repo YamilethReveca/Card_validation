@@ -27,7 +27,7 @@
     "node": ">=16.x"
   },
   "bootcamp": {
-    "createdAt": "2023-10-23T21:40:02.002Z",
+    "createdAt": "2023-10-23T21:41:47.668Z",
     "version": "7.3.0",
     "commit": "8c435d72459f110c17f692a5a43fbfeabfdbf4b9"
   }
