@@ -1,14 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>Tarjeta de Crédito Válida</header>
+  <h3>Bienvenido a este proyecto de ensayo para validar su tarjeta de Banco</h3>
+  <main>
+    <section class="modeloTarjeta">
+      <div class="logoTarjeta">
+        <img id="izquierda" class="logo" src="./img/chip.jpg">
+        <div id="centro"></div>
+        <img id="derecha" class="logo" src="./img/mastercard.png">
+      </div>
+      <div class="mostrarCopiaDatos">
+        <p id="copiaNumeroTarjeta">0000 000 000 000</p><br>
+      </div>
+      <div>
+        <p id="copiaNombreUsuario"></p>
+      </div>
+      <div class="expiracion">
+        <p id="copiaMes"></p><p id="copiaAño"></p>
+      </div>
+    </section>
+    <section class="modeloTarjetaAtras">
+      <div class="barra"></div>
+
+      <div class="barraBlanca">
+        <p id="tres"></p>
+      </div>
+
+
+    </section>
+
+    <section class="datosPersonales">
+      <label for="numeroTarjeta">Número de tarjeta</label>
+      <input type="text" id="numeroTarjeta" required maxlength="13">
+
+      <label for="nombreUsuario">Nombre del titular</label>
+      <input type="text" id="nombreUsuario" required maxlength="16">
+
+
+      <section class="fecha">
+        <label>Expiración</label>
+        <select id="month" name="month">
+          <option value="" disabled></option>
+          <option value="01">Enero</option>
+          <option value="02">Febero</option>
+          <option value="03">Marzo</option>
+          <option value="04">Abril</option>
+          <option value="05">Mayo</option>
+          <option value="06">Junio</option>
+          <option value="07">Julio</option>
+          <option value="08">Agosto</option>
+          <option value="09">Septiembre</option>
+          <option value="10">Octubre</option>
+          <option value="11">Noviembre</option>
+          <option value="12">Diciembre</option>
+        </select>
+
+        <label for="year"></label>
+        <select id="year" name="year">
+          <option>2024</option>
+          <option>2025</option>
+          <option>2026</option>
+          <option>2027</option>
+          <option>2028</option>
+        </select>
+      </section>
+      <label for="codigo">Código</label>
+      <input type="text" id="codigo" required maxlength="3">
+    </section>
+  </main>
+  <footer>
+    <p>Desarrollado por: <a href="https://github.com/YamilethReveca">YamilethReveca</a></p>
+  </footer>
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>
