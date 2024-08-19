@@ -1,56 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
-  <title>Tarjeta de crédito válida</title>
+  <title>Tarjeta de Crédito Válida</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <header>Tarjeta de Crédito Válida</header>
   <h3>Bienvenido a este proyecto de ensayo para validar su tarjeta de Banco</h3>
   <main>
-    <section class="modeloTarjeta">
+    <section id="tarjeta1" class="modeloTarjeta">
       <div class="logoTarjeta">
-        <img id="izquierda" class="logo" src="./img/chip.jpg">
+        <img id="izquierda" class="logo" src="./img/chip.jpg" alt="Chip">
         <div id="centro"></div>
-        <img id="derecha" class="logo" src="./img/mastercard.png">
+        <img id="derecha" class="logo" src="./img/mastercard.png" alt="Mastercard">
       </div>
-      <div class="mostrarCopiaDatos">
-        <p id="copiaNumeroTarjeta">0000 000 000 000</p><br>
+      <div class="mostrarCopiaDatos"><p id="copiaNumeroTarjeta"><span>**** **** **** 0000</span></p>
       </div>
       <div>
         <p id="copiaNombreUsuario"></p>
       </div>
       <div class="expiracion">
-        <p id="copiaMes"></p><p id="copiaAño"></p>
+        <p id="copiaMes"></p>
+        <p id="copiaAño"></p>
       </div>
     </section>
-    <section class="modeloTarjetaAtras">
+    <section id="tarjeta2" class="modeloTarjeta">
       <div class="barra"></div>
-
       <div class="barraBlanca">
         <p id="tres"></p>
       </div>
-
-
     </section>
-
     <section class="datosPersonales">
       <label for="numeroTarjeta">Número de tarjeta</label>
-      <input type="text" id="numeroTarjeta" required maxlength="13">
-
+      <input type="number" id="numeroTarjeta" min="0" max="9999999999999999" required>
+      <span id="validacionNumeroTarjeta"></span> <!-- Para mostrar estado de validez -->
       <label for="nombreUsuario">Nombre del titular</label>
-      <input type="text" id="nombreUsuario" required maxlength="16">
-
-
+      <input type="text" id="nombreUsuario" maxlength="16" required>
       <section class="fecha">
         <label>Expiración</label>
         <select id="month" name="month">
-          <option value="" disabled></option>
+          <option value="" disabled selected>Mes</option>
+          <!-- opciones del mes aquí -->
           <option value="01">Enero</option>
-          <option value="02">Febero</option>
+          <option value="02">Febrero</option>
           <option value="03">Marzo</option>
           <option value="04">Abril</option>
           <option value="05">Mayo</option>
@@ -62,18 +61,17 @@
           <option value="11">Noviembre</option>
           <option value="12">Diciembre</option>
         </select>
-
-        <label for="year"></label>
+        <label for="year">Año</label>
         <select id="year" name="year">
-          <option>2024</option>
-          <option>2025</option>
-          <option>2026</option>
-          <option>2027</option>
-          <option>2028</option>
+          <option value="2024">2024</option>
+          <option value="2025">2025</option>
+          <option value="2026">2026</option>
+          <option value="2027">2027</option>
+          <option value="2028">2028</option>
         </select>
       </section>
       <label for="codigo">Código</label>
-      <input type="text" id="codigo" required maxlength="3">
+      <input type="text" id="codigo" maxlength="3" pattern="\d{3}" required>
     </section>
   </main>
   <footer>
